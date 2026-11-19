@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VISWA RESTAURANT</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--gold:#d6ad60;--dark:#090909;--panel:#171717;--light:#f7f2e8}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--dark);color:var(--light);font-family:Poppins,sans-serif}
+.navbar{background:#080808;border-bottom:2px solid var(--gold);padding:15px 5%}
+.navbar-brand{font-family:'Playfair Display',serif;color:var(--gold)!important;font-size:27px;font-weight:800}
+.nav-link{color:white!important;margin-left:18px;font-weight:500}
+.nav-link:hover{color:var(--gold)!important}
+
+.hero{
+min-height:88vh;display:flex;align-items:center;padding:80px 8%;
+background:linear-gradient(90deg,rgba(0,0,0,.84),rgba(0,0,0,.25)),
+url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=85') center/cover no-repeat
+}
+.hero-content{max-width:720px}
+.welcome-tag{color:var(--gold);letter-spacing:5px;font-size:14px;font-weight:600}
+.hero h1{font-family:'Playfair Display',serif;color:white;font-size:clamp(48px,7vw,82px);font-weight:800;line-height:1.15;margin:20px 0}
+.hero h1 span{color:var(--gold)}
+.hero p{color:#eee;font-size:17px;line-height:1.9;max-width:600px}
+.gold-btn{display:inline-block;background:var(--gold);color:#111;padding:13px 28px;border-radius:4px;text-decoration:none;font-weight:700;margin-top:15px;border:0}
+.gold-btn:hover{background:#f0cf8d;color:#111}
+.outline-btn{display:inline-block;padding:13px 28px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;border-radius:4px;font-weight:600;margin-top:15px}
+.outline-btn:hover{background:var(--gold);color:#111}
+
+.section{padding:85px 6%}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-family:'Playfair Display',serif;color:var(--gold);font-size:40px}
+.section-title p{color:#bbb}
+.about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about-wrap img{width:100%;height:420px;object-fit:cover;border-radius:12px}
+.about-wrap h2{font-family:'Playfair Display',serif;color:var(--gold);font-size:38px}
+.about-wrap p{color:#ccc;line-height:1.9}
+
+.menu-heading{color:var(--gold);font-family:'Playfair Display',serif;margin:45px 0 25px}
+.food-card{background:var(--panel);border:1px solid #4b3b20;border-radius:12px;overflow:hidden;height:100%;transition:.3s}
+.food-card:hover{transform:translateY(-7px);border-color:var(--gold);box-shadow:0 12px 30px #000}
+.food-card img{width:100%;height:210px;object-fit:cover;display:block}
+.food-info{padding:18px}
+.food-info h5{color:var(--gold);font-weight:700}
+.food-info p{color:#c4c4c4;font-size:13px;min-height:42px}
+.price{color:white;font-size:20px;font-weight:700}
+
+.booking{background:linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.88)),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=85') center/cover}
+.booking-form{max-width:750px;margin:auto;background:#151515;padding:35px;border:1px solid var(--gold);border-radius:12px}
+.form-control,.form-select{background:#222;border:1px solid #555;color:white;padding:12px}
+.form-control:focus,.form-select:focus{background:#222;color:white;border-color:var(--gold);box-shadow:none}
+.form-control::placeholder{color:#aaa}
+.contact-box{background:#151515;padding:30px;border-radius:10px;border:1px solid #49391e;height:100%}
+.contact-box h4{color:var(--gold)}
+footer{background:#050505;border-top:1px solid var(--gold);text-align:center;padding:25px;color:#aaa}
+
+@media(max-width:768px){
+.about-wrap{grid-template-columns:1fr}
+.about-wrap img{height:280px}
+.section{padding:60px 5%}
+.hero{min-height:75vh;padding:60px 6%}
+.navbar-brand{font-size:22px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="#home">VISWA RESTAURANT</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="#booking">Booking</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HOME PAGE -->
+<section class="hero" id="home">
+<div class="hero-content">
+<span class="welcome-tag">WELCOME TO VISWA</span>
+<h1>VISWA<br><span>RESTAURANT</span></h1>
+<p>A Taste of Tradition, A Touch of Excellence. Enjoy delicious food prepared with fresh ingredients, authentic flavours and the finest hospitality.</p>
+<a href="#menu" class="gold-btn">Explore Our Menu</a>
+<a href="#booking" class="outline-btn">Book a Table</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+<div class="about-wrap">
+<img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1000&q=85" alt="Professional chef preparing food">
+<div>
+<h2>About Viswa Restaurant</h2>
+<p>Welcome to VISWA RESTAURANT, where great food and warm hospitality come together. Our professional kitchen team prepares every dish with care, quality ingredients and attention to detail.</p>
+<p>From traditional vegetarian meals to delicious non-vegetarian specialities, we bring you fresh flavours and a wonderful dining experience.</p>
+<a href="#menu" class="gold-btn">Discover Our Food</a>
+</div>
+</div>
+</section>
+
+<!-- FOOD MENU -->
+<section class="section" id="menu">
+<div class="section-title">
+<h2>Our Special Menu</h2>
+<p>Freshly prepared dishes made by our kitchen team</p>
+</div>
+<h3 class="menu-heading">🥗 Vegetarian Specials</h3>
+<div class="row g-4" id="vegMenu"></div>
+<h3 class="menu-heading">🍗 Non-Vegetarian Specials</h3>
+<div class="row g-4" id="nonVegMenu"></div>
+</section>
+
+<!-- BOOKING -->
+<section class="section booking" id="booking">
+<div class="section-title">
+<h2>Book a Table</h2>
+<p>Reserve your table and enjoy a wonderful meal</p>
+</div>
+<form class="booking-form" id="bookingForm">
+<div class="row g-3">
+<div class="col-md-6"><input class="form-control" type="text" placeholder="Your Name" required></div>
+<div class="col-md-6"><input class="form-control" type="tel" placeholder="Mobile Number" required></div>
+<div class="col-md-6"><input class="form-control" type="date" required></div>
+<div class="col-md-6"><input class="form-control" type="time" required></div>
+<div class="col-12">
+<select class="form-select" required>
+<option value="">Select Number of Guests</option>
+<option>1 Guest</option><option>2 Guests</option><option>3 Guests</option>
+<option>4 Guests</option><option>5 Guests</option><option>6 Guests</option>
+<option>More than 6 Guests</option>
+</select>
+</div>
+<div class="col-12 text-center">
+<button class="gold-btn" type="submit">Submit Booking</button>
+</div>
+</div>
+</form>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>We would love to serve you</p>
+</div>
+<div class="row g-4">
+<div class="col-md-4">
+<div class="contact-box"><h4>Address</h4><p>VISWA RESTAURANT<br>Contact us for location details.</p></div>
+</div>
+<div class="col-md-4">
+<div class="contact-box"><h4>Phone</h4><p>+91 94885 03868</p></div>
+</div>
+<div class="col-md-4">
+<div class="contact-box"><h4>Opening Hours</h4><p>Monday – Sunday<br>9:00 AM – 10:00 PM</p></div>
+</div>
+</div>
+</section>
+
+<footer>
+<p class="mb-0">© 2026 VISWA RESTAURANT. All Rights Reserved.</p>
+</footer>
+
+<script>
+const vegFoods=[
+["South Indian Meals","Traditional meals served with delicious sides.",180,"photo-1547592180-85f173990554"],
+["Paneer Butter Masala","Soft paneer in rich creamy tomato gravy.",220,"photo-1631452180519-c014fe946bc7"],
+["Masala Dosa","Crispy dosa filled with spiced potato masala.",90,"photo-1668236543090-82eba5ee5976"],
+["Veg Biryani","Fragrant rice cooked with fresh vegetables.",160,"photo-1589302168068-964664d93dc0"],
+["Gobi Manchurian","Crispy cauliflower tossed in spicy sauce.",150,"photo-1626132647523-66f5bf380027"],
+["Mushroom Masala","Fresh mushrooms cooked in Indian spices.",190,"photo-1505576633757-0ac1084af824"],
+["Veg Fried Rice","Rice tossed with vegetables and sauces.",140,"photo-1603133872878-684f208fb84b"],
+["Paneer Tikka","Marinated paneer grilled with spices.",210,"photo-1567188040759-fb8a883dc6d8"],
+["Chilli Paneer","Paneer cubes tossed in chilli sauce.",190,"photo-1565299624946-b28f40a0ae38"],
+["Poori Masala","Fluffy pooris served with potato masala.",80,"photo-1626777552726-4a6b54c97e46"],
+["Veg Noodles","Hot noodles tossed with fresh vegetables.",140,"photo-1569718212165-3a8278d5f624"],
+["Aloo Parotta","Indian flatbread stuffed with spiced potato.",100,"photo-1565557623262-b51c2513a641"],
+["Chana Masala","Chickpeas cooked in rich Indian gravy.",150,"photo-1603894584373-5ac82b2ae398"],
+["Tomato Rice","South Indian style tangy tomato rice.",110,"photo-1512058564366-18510be2db19"],
+["Veg Pulao","Aromatic rice cooked with vegetables.",150,"photo-1596797038530-2c107229654b"],
+["French Fries","Golden crispy potato fries.",100,"photo-1573080496219-bb080dd4f877"],
+["Veg Pizza","Cheesy pizza topped with fresh vegetables.",230,"photo-1513104890138-7c749659a591"],
+["Idli Sambar","Soft idlis served with sambar and chutney.",70,"photo-1589301760014-d929f3979dbc"],
+["Mix Veg Curry","Seasonal vegetables in Indian masala gravy.",170,"photo-1547592180-85f173990554"],
+["Veg Kothu Parotta","Chopped parotta mixed with vegetables and spices.",150,"photo-1630384060421-cb20d0e0649d"]
+];
+
+const nonVegFoods=[
+["Chicken Biryani","Aromatic biryani with tender chicken pieces.",220,"photo-1589302168068-964664d93dc0"],
+["Mutton Biryani","Special mutton biryani cooked with fragrant spices.",300,"photo-1633945274405-b6c8069047b0"],
+["Chicken 65","Crispy spicy chicken bites.",190,"photo-1603894584373-5ac82b2ae398"],
+["Chicken Curry","Tender chicken cooked in traditional masala.",210,"photo-1603894584373-5ac82b2ae398"],
+["Fish Fry","Fresh fish marinated in spices and shallow fried.",180,"photo-1519708227418-c8fd9a32b7a2"],
+["Fish Fingers","Golden crumb-coated fish strips, crisp outside and soft inside.",210,"photo-1535399831218-d5bd36d1a6b3"],
+["Prawn Masala","Juicy prawns cooked in spicy masala.",260,"photo-1565680018434-b513d5e5fd47"],
+["Chicken Pizza","Pizza topped with chicken and melted cheese.",280,"photo-1571407970349-bc81e7e96d47"],
+["Tandoori Chicken","Chicken marinated and roasted in a tandoor.",290,"photo-1599487488170-d11ec9c172f0"],
+["Grilled Chicken","Juicy grilled chicken with special seasoning.",320,"photo-1532550907401-a500c9a57435"],
+["Egg Fried Rice","Fried rice tossed with egg and vegetables.",150,"photo-1603133872878-684f208fb84b"],
+["Chicken Noodles","Hot noodles with chicken and vegetables.",180,"photo-1612929633738-8fe44f7ec841"],
+["Egg Dosa","Crispy dosa topped with seasoned egg.",110,"photo-1668236543090-82eba5ee5976"],
+["Chicken Kothu Parotta","Chopped parotta mixed with chicken and spices.",190,"photo-1630384060421-cb20d0e0649d"],
+["Mutton Curry","Slow-cooked mutton in rich Indian gravy.",280,"photo-1545247181-516773cae754"],
+["Chilli Chicken","Chicken tossed with capsicum and chilli sauce.",210,"photo-1603894584373-5ac82b2ae398"],
+["Crab Masala","Crab cooked with aromatic coastal spices.",320,"photo-1559737558-2f5a35f4523b"],
+["Fish Curry","Traditional fish curry with tangy spices.",200,"photo-1535399831218-d5bd36d1a6b3"],
+["Chicken Lollipop","Crispy chicken lollipops with spicy coating.",220,"photo-1626082927389-6cd097cdc6ec"],
+["Prawn Fry","Fresh prawns fried with pepper and spices.",270,"photo-1565680018434-b513d5e5fd47"]
+];
+
+function showFoods(items,containerId){
+const container=document.getElementById(containerId);
+items.forEach(food=>{
+const [name,description,price,imageId]=food;
+const col=document.createElement("div");
+col.className="col-sm-6 col-lg-3";
+const imageUrl="https://images.unsplash.com/"+imageId+"?auto=format&fit=crop&w=800&q=85";
+col.innerHTML=`
+<div class="food-card">
+<img src="${imageUrl}" alt="${name}" loading="lazy"
+onerror="this.onerror=null;this.src='https://placehold.co/800x500/171717/d6ad60?text=VISWA+RESTAURANT';">
+<div class="food-info">
+<h5>${name}</h5>
+<p>${description}</p>
+<div class="price">₹${price}</div>
+</div>
+</div>`;
+container.appendChild(col);
+});
+}
+showFoods(vegFoods,"vegMenu");
+showFoods(nonVegFoods,"nonVegMenu");
+
+document.getElementById("bookingForm").addEventListener("submit",function(event){
+event.preventDefault();
+alert("Thank you for choosing VISWA RESTAURANT! Your booking request has been received.");
+this.reset();
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
